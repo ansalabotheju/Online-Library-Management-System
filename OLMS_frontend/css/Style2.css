@@ -1,0 +1,299 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: SansSerif;
+
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(20,20,35,0.70),rgba(20,20,35,0.70)),url("../images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 5s;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60));
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 60px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase ;
+
+}
+.navbar ul li::after{
+    content: "";
+    height: 4px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    transform: initial;
+
+}
+.sel::after{
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    transform-origin: center;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 70px;
+}
+.content h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 130px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: black;
+
+}
+span{
+    background: #10c1c4;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+button:hover span{
+    width: 100%;
+}
+button:hover {
+    border: 0;
+}
+
+
+
+.bgPop{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0, 0, 0, 0.75));
+    position: absolute;
+    top: 0;
+    display: none;
+    align-items: center;
+    transition: 3s;
+}
+.popLog{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    align-content: center;
+    left: calc(50% - 200px);
+}
+.bgPop input {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 3px solid #7b7b7b;
+    outline: none;
+    height: 40px;
+    font-size: 18px;
+}
+.bgPop p{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.bgPop h1{
+    position: relative;
+    text-align: center;
+    top: 40px;
+    margin-bottom: 80px;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.close:hover{
+    color: red;
+}
+.btn{
+    text-align: center;
+    border-radius: 25px;
+    background: #10c1c4;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    color: white;
+    font-weight: bold;
+    width: 20%;
+}
+.loginImg{
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    border-radius: 50%;
+    position: absolute;
+    padding: 0 -200px;
+    left: calc(50% - 50px);
+    border-bottom: 3px solid #7b7b7b;
+}
+
+
+
+
+
+.regBanner{
+    width: 100%;
+    height: 100vh;
+    background-image:url("../images/reg.jpg");
+    background-size: cover;
+}
+
+.btn2{
+    text-align: center;
+    background: #c2e4ec;
+    cursor: pointer;
+    position: relative;
+    color: black;
+    font-weight: bold;
+    width: 30%;
+    padding: 20px;
+    font-size: 20px;
+    left: 100px;
+    margin-top: 20px;
+    top:100px;
+    border: 3px solid rgba(102, 220, 224, 0.5);
+    border-radius: 25px;
+    transform: none;
+}
+.btn2:hover{
+    background: #0b5261;
+    color: white;
+    transform: scale3d(1.07,1.07,1.07);
+
+}
+
+.right{
+    width: 50%;
+    float: right;
+}
+.left{
+    width: 50%;
+    float: left;
+}
+
+.regMemPop{
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    align-content: center;
+    left: 55%;
+    top: 90px;
+    padding-right: 30px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    opacity: 90%;
+    display: none;
+    box-shadow: 2px 2px ;
+}
+.regCon{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+.regCon input, select {
+    width: 95%;
+    margin-bottom: 18px;
+    border: none;
+    border-bottom: 3px solid #7b7b7b;
+    outline: none;
+    height: 38px;
+    font-size: 17px;
+
+}
+.regCon p{
+    font-weight: bold;
+    font-size: 18px;
+}
+.regPubPop{
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    left: 55%;
+    top: 90px;
+    padding-right: 30px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    opacity: 90%;
+    display: none;
+}

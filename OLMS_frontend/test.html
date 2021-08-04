@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Start" onclick="start()">
+<br>
+<input type="button" value="Stop" onclick="stop()">
+<br>
+<p id="timeViewer"></p>
+
+<script type="text/javascript">
+    let startTime;
+    function start(){
+        let timeView = document.getElementById('timeViewer');
+        startTime = new Date().getTime();
+        document.getElementById('timeViewer').innerHTML = "Timer Started.";
+
+    }
+
+    function stop(){
+        if (startTime){
+            let endTime = new Date().getTime();
+            document.getElementById('timeViewer').innerHTML = "Timer Stopped.";
+            let difference = endTime - startTime;
+            let seconds = Math.floor(difference / 1000);
+            startTime = 0;
+            alert("Time is: " + seconds + "s")
+            document.getElementById('timeViewer').innerHTML = "Time is: " + seconds + "s";
+
+        }else {
+            alert("Click Start first!!!")
+        }
+    }
+
+</script>
+
+</body>
+</html>

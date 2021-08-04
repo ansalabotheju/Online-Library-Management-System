@@ -1,0 +1,113 @@
+
+.regBannerStaff{
+    width: 100%;
+    height: 100vh;
+    background-image:url("../images/staff.jpg");
+    background-size: cover;
+}
+.navbarStaff{
+    width: 100%;
+    height: 80px;
+    background-color: #282828;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarStaff ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbarStaff ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase ;
+
+}
+.navbarStaff ul li::after{
+    content: "";
+    height: 4px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    transform: initial;
+
+}
+.navbarStaff ul li:hover::after{
+    width: 100%;
+    transform-origin: center;
+}
+.search {
+    position: center;
+    padding: 40px;
+}
+.search input {
+    outline: none;
+    width: 170px;
+    margin-left: 30px;
+    border: 3px solid #1a5f5f;
+    border-radius: 50px;
+    align-content: center;
+    padding-left: 10px;
+    height: 38px;
+    font-size: 17px;
+    color: #000000;
+    align-content: center;
+}
+.searchBtn{
+    background-color: #3e715b;
+    width: 100px;
+    margin-left: 100px;
+    color: white;
+    font-size: 22px;
+}
+/*.table {*/
+/*    margin: 40px;*/
+/*    width: 80%;*/
+/*    border:2px solid ;*/
+/*    position: center;*/
+/*}*/
+/*.table th{*/
+/*    padding: 10px;*/
+/*    margin: 80px;*/
+/*    width: 130px;*/
+/*    border: none;*/
+/*    position: center;*/
+/*    font-weight: bold;*/
+/*    font-size: 18px;*/
+/*    background-color: white;*/
+/*}*/
+/*.table td{*/
+/*    padding: 6px;*/
+/*    margin: 20px;*/
+/*    width: 130px;*/
+/*    border: none;*/
+/*    background-color: rgba(255, 255, 255, 0.4);*/
+/*    position: center;*/
+/*}*/
+.card {
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 0px;
+    height: 120px;
+    width: 180px;
+    padding: 10px 10px;
+    margin: 40px 0px 0px 40px ;
+    position: relative;
+    text-align: left;
+    box-shadow: 2px 2px 10px #282828;
+}
+.cards{
+    border: none;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    margin: 0 20px;
+}

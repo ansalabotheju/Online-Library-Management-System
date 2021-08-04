@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Books</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="banner_member">
+        <div >
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow p-2 mb-5">
+                <i class="fas fa-book icon" href="Member_dashboard.html" ></i>
+                
+                <a class="navbar-brand mleft" href="Member_dashboard.html"> ABC LIBRARY</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto mleft " >
+                        <li class="nav-item "  >
+                            <a class="nav-link " href="Member_dashboard.html" >Dashboard <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="Member_books.html">Books <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item boarder">
+                            <a class="nav-link active cronsilk" href="Member_ebooks.html">E-Books <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="Member_profile.html">Profile <span class="sr-only"></span></a>
+                        </li>
+        
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <i class="fas fa-user icon"></i>
+                        <a class="nav-item nav-link disabled cronsilk" href="#" > Hasitha</a>
+                        <button class="btn btn-primary" type="button"  >
+                            Logout 
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <form id="staff_book_search_form">
+                <div class="row shadow-lg p-3 mb-5">
+                    <div class="col-1">
+                        <input type="hidden" name="type" class="form-control" value="searchBook">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="isbn" class="form-control" placeholder="Book ID">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="title" class="form-control" placeholder="Title">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="author" class="form-control" placeholder="Author">
+                    </div>
+                    <div class="col-2">
+                        <select name="category" class="form-control" >
+                            <option selected value="all">All</option>
+                            <option value="IT">IT</option>
+                            <option value="Science">Science</option>
+                            <option value="Story">Story</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-primary mb-2">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+            <div style="margin:50px 150px">
+                <ul class="list-unstyled">
+                    <li class="media shadow-lg p-3 mb-5 bg-white rounded">
+                        <img class="mr-3" src="../images/1.jpg" alt="Generic placeholder image" width="80px" height="110px">
+                        <div class="media-body">
+                            <input class="bglabelbold" type="lable" readonly value="List-based media object">
+                            <input class="bglabel" type="lable" readonly value="by A.B. Perera"><br>
+                            <input class="bglabel" type="lable" readonly value="Rating : 4.95"><br>
+                            <input class="bglabel" type="lable" readonly value="Published Date"><br>
+                            <input class="bglabelbold" type="lable" readonly value="Readers: 25,726">
+                        </div>
+                        <div style="padding:35px">
+                            <form id="read_button_form">
+
+                            </form>
+                            <button type="submit"  class="btn btn-primary" data-toggle="modal" data-target="#view">Read</button>
+                        </div>
+            
+                    </li>
+                    <li class="media my-4 shadow-lg p-3 mb-5 bg-white rounded">
+                        <img class="mr-3" src="../images/2.jpg" alt="Generic placeholder image" width="80px" height="110px">
+                        <div class="media-body">
+                            <input class="bglabelbold" type="lable" readonly value="List-based media object">
+                            <input class="bglabel" type="lable" readonly value="by A.B. Perera"><br>
+                            <input class="bglabel" type="lable" readonly value="Rating : 4.95"><br>
+                            <input class="bglabel" type="lable" readonly value="Published Date"><br>
+                            <input class="bglabelbold" type="lable" readonly value="Readers: 25,726">
+                        </div>
+                        <div style="padding:35px">
+                            <button type="submit" class="btn btn-primary">Read</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal fade banner_member" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg " role="document" >
+                <div class="modal-content" >
+                    <div class="modal-body" >
+                        <div class="row">
+                            <div class="col-2 ">
+                              <button class="btn btn-primary btn-lg mtop mleft"  type="submit">
+                               Previous
+                              </button>
+                            </div>
+                            <div class="col-8">
+                              <object style="display: flexbox;" data='1.pdf#page=5' type="application/pdf" width="100%" height="678">
+                              </object>
+                            </div>
+                            <div class="col-2">
+                              <button class="btn btn-primary btn-lg mtop mleft"  type="submit">
+                                Next
+                              </button>
+                            </div>
+                          
+                          </div>
+                          <div class="row">
+                            <div class="col"  >
+                            </div>
+                            <div class="col"  >
+                              <input class="cronsilk " type="text" disabled placeholder="Page number:40" style="background: none; border: none;">
+                            </div>
+                            <div class="col"  >
+                            </div>
+                          </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#rate" >Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade banner_member" id="rate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered  role="document" >
+                <div class="modal-content shadow p-2 mb-5" >
+                    <div class="modal-head">
+                        
+                    </div>
+                    <div class="modal-body" >
+                        <div class="row">
+                            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+                            <div class="form-group" id="rating-ability-wrapper">
+                                <label class="control-label" for="rating">
+                                <span class="field-label-header">Please Leave a Rating</span><br>
+                                <span class="field-label-info"></span>
+                                <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+                                </label>
+                                <h2 class="bold rating-header" >
+                                <span class="selected-rating">0</span><small> / 5</small>
+                                </h2>
+                                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../JS/js3.js"></script>
+    <script src="https://kit.fontawesome.com/2d12b1cbb1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
